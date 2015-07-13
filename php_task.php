@@ -19,6 +19,6 @@ usort($data, function($some_row, $other_row) {
 
 
 foreach ($data as $row) {
-	echo "{$row['id']} {$row['datetime']}" . PHP_EOL;
+	file_put_contents("test_output.txt", "{$row['id']} {$row['datetime']}" . PHP_EOL, FILE_APPEND | LOCK_EX);
 }
 ?>
